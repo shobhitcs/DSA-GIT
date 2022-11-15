@@ -5,18 +5,15 @@ void merge(int* arr,int l,int mid,int h){
     int arrright[n2];
 
 
-    for (int i = 0; i < n1; i++)
-    {
+    for (int i = 0; i < n1; i++){
         arrleft[i]=arr[l+i];
     }
-    for (int i = 0; i < n1; i++)
-    {
+    for (int i = 0; i < n1; i++){
         arrright[i]=arr[ mid+1+i];
     }
 
     int j=0,k=l,i=0;
-    while (i<n1 && j<n2)
-    {
+    while (i<n1 && j<n2){
         if(arrleft[i]<=arrright[j] ){
             arr[k]=arrleft[i];
             i++;k++;
@@ -27,20 +24,15 @@ void merge(int* arr,int l,int mid,int h){
         }
     }
 
-    while (i<n1)
-    {
+    while (i<n1){
         arr[k]=arrleft[i];
         i++;k++;
     }
-    while (j<n2)
-    {
+    while (j<n2){
         arr[k]=arrright[j];
         j++;k++;
     }
     
-    
-    
-
 }
 
 
@@ -55,7 +47,7 @@ void mergesort(int* arr,int l,int h){
 }
 
 int main(){
-    int a[7]={5,4,3,2,1,-0,-3};
+    int a[7]={2,2,3,3,3,4,5};
     int size=7;
     mergesort(a,0,size-1);
     for (int i = 0; i < size; i++)
